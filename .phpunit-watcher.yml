@@ -2,4 +2,4 @@ watch:
   directories:
     - 
     - tests
-  fileMask: '*.php'
+  fileMask: '*.*'
