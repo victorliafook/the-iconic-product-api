@@ -1,6 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use TheIconicAPIDumper\DumpCommand;
@@ -19,8 +21,16 @@ class DumpCommandTest extends TestCase
              
         $APIWrapper = new APIWrapper($httpClientStub);
         $command = new DumpCommand($APIWrapper);
-        $jsonResult = $command->dump();
         
-        $this->assertJsonStringEqualsJsonFile(self::JSON_FIXTURE, $jsonResult);
+        $consoleOutputMock = $this->getMockBuilder(ConsoleOutput::class)
+                     ->setMethods(['writeln'])
+                     ->getMock();
+        
+        $consoleOutputMock->expects($this->once())
+                 ->method('writeln')
+                 ->with($fixtureData);      
+        
+        $consoleInputMock = $this->createMock(ArgvInput::class);
+        $command->execute($consoleInputMock, $consoleOutputMock);
     }
 }

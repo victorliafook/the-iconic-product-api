@@ -2,6 +2,9 @@
 
 namespace TheIconicAPIDumper;
 
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Output\OutputInterface;
+
 class DumpCommand
 {
     function __construct(APIWrapper $api)
@@ -9,9 +12,9 @@ class DumpCommand
         $this->wrapper = $api;
     }
     
-    public function dump()
+    public function execute(InputInterface $input, OutputInterface $output)
     {
         $APIResponse = $this->wrapper->get();
-        return $APIResponse;
+        $output->writeln($APIResponse);
     }
 }
