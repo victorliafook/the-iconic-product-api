@@ -26,7 +26,7 @@ class APIWrapperTest extends TestCase
     
     public function testRequestURLWithGenderParam()
     {
-        $targetParamValue = 'female';
+        $targetParamValue = str_shuffle('female');
         $targetURL = APIWrapper::API_URL . $this->getQueryForParam('gender',  $targetParamValue);
         
         $this->APIQueryBuilder->gender($targetParamValue);
@@ -37,7 +37,7 @@ class APIWrapperTest extends TestCase
     
     public function testRequestURLWithPageParam()
     {
-        $targetParamValue = '100';
+        $targetParamValue = str_shuffle('1234');
         $targetURL = APIWrapper::API_URL . $this->getQueryForParam('page',  $targetParamValue);
 
         $this->APIQueryBuilder->page($targetParamValue);
@@ -48,7 +48,7 @@ class APIWrapperTest extends TestCase
     
     public function testRequestURLWithPageSizeParam()
     {
-        $targetParamValue = '999';
+        $targetParamValue = str_shuffle('789');
         $targetURL = APIWrapper::API_URL . $this->getQueryForParam('pageSize',  $targetParamValue);
         
         $this->APIQueryBuilder->pageSize($targetParamValue);
@@ -59,7 +59,7 @@ class APIWrapperTest extends TestCase
     
     public function testRequestURLWithSortParam()
     {
-        $targetParamValue = 'price';
+        $targetParamValue = str_shuffle('price');
         $targetURL = APIWrapper::API_URL . $this->getQueryForParam('sort',  $targetParamValue);
         
         $this->APIQueryBuilder->sort($targetParamValue);
