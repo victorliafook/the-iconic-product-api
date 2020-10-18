@@ -7,7 +7,7 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 class APIWrapper
 {
     const API_URL = 'https://eve.theiconic.com.au/catalog/products';
-    private $query = '?';
+    private $query = '';
     
     function __construct(HttpClientInterface $httpClient)
     {
@@ -16,8 +16,13 @@ class APIWrapper
     
     public function get()
     {
+        $requestURL = self::API_URL;
+        if (!empty($this->query)) {
+            $requestURL .= $this->query;
+        }
+        
         return $this->httpClient
-            ->request('GET', self::API_URL)
+            ->request('GET', $requestURL)
             ->getContent();
     }
     
@@ -26,7 +31,7 @@ class APIWrapper
         $this->query = $queryBuilder->build();
     }
     
-    public static function createBuilder()
+    public static function createQueryBuilder()
     {
         return new APIWrapperQueryBuilder();
     }
