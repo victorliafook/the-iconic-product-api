@@ -65,7 +65,7 @@ class DumpCommandTest extends TestCase
             ->method('writeln');
         
         $consoleInputMock = $this->getMockBuilder(ArgvInput::class)
-            ->setMethods(['getArgument'])
+            ->setMethods(['getOption'])
             ->getMock();
         
         $getArgumentCallsMap = [
@@ -76,7 +76,7 @@ class DumpCommandTest extends TestCase
         ];
         
         $consoleInputMock->expects($this->any())
-            ->method('getArgument')
+            ->method('getOption')
             ->will($this->returnValueMap($getArgumentCallsMap));
 
         $command->execute($consoleInputMock, $consoleOutputMock);

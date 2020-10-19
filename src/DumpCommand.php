@@ -3,7 +3,7 @@
 namespace TheIconicAPIDumper;
 
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -19,32 +19,32 @@ class DumpCommand extends Command
     {
         $this->setName('dump')
             ->setDescription('Prints the Product API query result')
-            ->addArgument('page', InputArgument::OPTIONAL, 'The page number to be fetched')
-            ->addArgument('page-size', InputArgument::OPTIONAL, 'The number of entries on a page')
-            ->addArgument('gender', InputArgument::OPTIONAL, 'Filter by gender')
-            ->addArgument('sort', InputArgument::OPTIONAL, 'Sort');
+            ->addOption('page', 'p', InputOption::VALUE_REQUIRED, 'The page number to be fetched')
+            ->addOption('page-size', 's', InputOption::VALUE_REQUIRED, 'The number of entries on a page')
+            ->addOption('gender', 'g', InputOption::VALUE_REQUIRED, 'Filter by gender')
+            ->addOption('sort', 'so', InputOption::VALUE_REQUIRED, 'Sort');
     }
     
     public function execute(InputInterface $input, OutputInterface $output)
     {
         $APIWrapperBuilder = APIWrapper::createQueryBuilder();
         
-        $gender = $input->getArgument('gender');
+        $gender = $input->getOption('gender');
         if (!empty($gender)) {
             $APIWrapperBuilder->gender($gender);
         }
         
-        $page = $input->getArgument('page');
+        $page = $input->getOption('page');
         if (!empty($page)) {
             $APIWrapperBuilder->page($page);
         }
         
-        $pageSize = $input->getArgument('page-size');
+        $pageSize = $input->getOption('page-size');
         if (!empty($pageSize)) {
             $APIWrapperBuilder->pageSize($pageSize);
         }
         
-        $sort = $input->getArgument('sort');
+        $sort = $input->getOption('sort');
         if (!empty($sort)) {
             $APIWrapperBuilder->sort($sort);
         }
