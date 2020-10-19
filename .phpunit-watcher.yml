@@ -3,3 +3,4 @@ watch:
     - 
     - tests
   fileMask: '*.*'
+  
