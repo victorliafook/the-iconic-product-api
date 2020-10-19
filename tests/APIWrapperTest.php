@@ -5,11 +5,17 @@ use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use TheIconicAPIDumper\APIWrapper;
 use TheIconicAPIDumper\APIWrapperQueryBuilder;
-use TheIconicAPIDumper\VideoPreviewDecorator;
-use TheIconicAPIDumper\OrderByVideoCountDecorator;
+use TheIconicAPIDumper\Decorators\OrderByVideoCountDecorator;
+use TheIconicAPIDumper\Decorators\VideoPreviewDecorator;
 
 class APIWrapperTest extends TestCase
 {
+    const PRISTINE_JSON_RESULT_FIXTURE = 'tests/fixture/result.json';
+    const VIDEO_DETAILS_JSON_RESULT_FIXTURE = 'tests/fixture/videoDetails.json';
+    const VIDEO_DECORATED_JSON_RESULT_FIXTURE = 'tests/fixture/videoDecoratedResult.json';
+    const VIDEO_ORDERED_JSON_RESULT_FIXTURE = 'tests/fixture/orderedDecoratedResult.json';
+    const VIDEO_DECO_ORDERED_JSON_RESULT_FIXTURE = 'tests/fixture/videoAndOrderedDecoratedResult.json';
+    
     protected function setUp()
     {
         $this->APIQueryBuilder = APIWrapper::createQueryBuilder();
@@ -98,8 +104,8 @@ class APIWrapperTest extends TestCase
     
     public function testDecoratedResults()
     {
-        $fixtureData = file_get_contents('tests/fixture/result.json');
-        $videoDetailsFixtureData = file_get_contents('tests/fixture/videoDetails.json');
+        $fixtureData = file_get_contents(self::PRISTINE_JSON_RESULT_FIXTURE);
+        $videoDetailsFixtureData = file_get_contents(self::VIDEO_DETAILS_JSON_RESULT_FIXTURE);
         $httpClientStub = new MockHttpClient(
             [
                 new MockResponse($fixtureData),
@@ -112,12 +118,12 @@ class APIWrapperTest extends TestCase
         $APIWrapper = new APIWrapper($httpClientStub);
         $this->assertJsonStringEqualsJsonString($fixtureData, $APIWrapper->getProducts()->getContent());
         
-        $decoratedfixtureData = file_get_contents('tests/fixture/videoDecoratedResult.json');
+        $decoratedfixtureData = file_get_contents(self::VIDEO_DECORATED_JSON_RESULT_FIXTURE);
         
         $decoratedResponse = new VideoPreviewDecorator($APIWrapper->getProducts(), $APIWrapper);
         $this->assertJsonStringEqualsJsonString($decoratedfixtureData, $decoratedResponse->getContent());
         
-        $orderedDecoratedfixtureData = file_get_contents('tests/fixture/orderedDecoratedResult.json');
+        $orderedDecoratedfixtureData = file_get_contents(self::VIDEO_ORDERED_JSON_RESULT_FIXTURE);
         
         $orderedDecoratedResponse = new OrderByVideoCountDecorator($APIWrapper->getProducts());
         $this->assertJsonStringEqualsJsonString($orderedDecoratedfixtureData, $orderedDecoratedResponse->getContent());
@@ -125,9 +131,9 @@ class APIWrapperTest extends TestCase
     
     public function testMultipleDecorators()
     {
-        $fixtureData = file_get_contents('tests/fixture/result.json');
-        $videoDetailsFixtureData = file_get_contents('tests/fixture/videoDetails.json');
-        $videoAndOrderedDecoratedFixtureData = file_get_contents('tests/fixture/videoAndOrderedDecoratedResult.json');
+        $fixtureData = file_get_contents(self::PRISTINE_JSON_RESULT_FIXTURE);
+        $videoDetailsFixtureData = file_get_contents(self::VIDEO_DETAILS_JSON_RESULT_FIXTURE);
+        $videoAndOrderedDecoratedFixtureData = file_get_contents(self::VIDEO_DECO_ORDERED_JSON_RESULT_FIXTURE);
         
         $httpClientStub = new MockHttpClient(
             [
