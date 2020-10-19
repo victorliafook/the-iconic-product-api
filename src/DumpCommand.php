@@ -18,7 +18,7 @@ class DumpCommand extends Command
     public function configure()
     {
         $this->setName('dump')
-            ->setDescription('Greet a user based on the time of the day.')
+            ->setDescription('Prints the Product API query result')
             ->addArgument('page', InputArgument::OPTIONAL, 'The page number to be fetched')
             ->addArgument('page-size', InputArgument::OPTIONAL, 'The number of entries on a page')
             ->addArgument('gender', InputArgument::OPTIONAL, 'Filter by gender')
