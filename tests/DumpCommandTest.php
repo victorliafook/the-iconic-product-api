@@ -48,10 +48,10 @@ class DumpCommandTest extends TestCase
         $pageSizeOption = '100';
         $sortOption = 'popularity';
         
-        $query = "?gender=${genderOption}&page=${pageOption}&page_size=${pageSizeOption}&sort=${sortOption}";
+        $targetQuery = "?gender=${genderOption}&page=${pageOption}&page_size=${pageSizeOption}&sort=${sortOption}";
         
-        $mockResponseCallback = function ($method, $url, $options) use ($query) {
-            $this->assertEquals(APIWrapper::API_URL . $query, $url);
+        $mockResponseCallback = function ($method, $url, $options) use ($targetQuery) {
+            $this->assertEquals(APIWrapper::API_URL . $targetQuery, $url);
 
             return new MockResponse('...');
         };
