@@ -1,18 +1,5 @@
 {
-   "_links":{
-      "self":{
-         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page=1&page_size=3"
-      },
-      "first":{
-         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page_size=3"
-      },
-      "last":{
-         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page=33333333&page_size=3"
-      },
-      "next":{
-         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page=2&page_size=3"
-      }
-   },
+   "_links":{},
    "_embedded":{
       "product":[
          {
