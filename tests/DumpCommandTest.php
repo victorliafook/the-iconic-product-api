@@ -10,13 +10,15 @@ use TheIconicAPIDumper\APIWrapper;
 
 class DumpCommandTest extends TestCase
 {
-    const JSON_FIXTURE = 'tests/fixture/result.json';
+    const PRISTINE_JSON_RESULT_FIXTURE = 'tests/fixture/result.json';
+    const VIDEO_DETAILS_JSON_RESULT_FIXTURE = 'tests/fixture/videoDetails.json';
+    const VIDEO_ORDERED_JSON_RESULT_FIXTURE = 'tests/fixture/videoAndOrderedDecoratedResult.json';
     
     public function testItDumpsJSONFromHTTPRequest()
     {
-        $fixtureData = file_get_contents(self::JSON_FIXTURE);
-        $videoDetailsFixtureData = file_get_contents('tests/fixture/videoDetails.json');
-        $videoAndOrderedDecoratedFixtureData = file_get_contents('tests/fixture/videoAndOrderedDecoratedResult.json');
+        $fixtureData = file_get_contents(self::PRISTINE_JSON_RESULT_FIXTURE);
+        $videoDetailsFixtureData = file_get_contents(self::VIDEO_DETAILS_JSON_RESULT_FIXTURE);
+        $videoAndOrderedDecoratedFixtureData = file_get_contents(self::VIDEO_ORDERED_JSON_RESULT_FIXTURE);
         $httpClientStub = new MockHttpClient(
             [
                 new MockResponse($fixtureData),
@@ -41,15 +43,22 @@ class DumpCommandTest extends TestCase
     
     public function testCommandBuildsHttpQueryCorrectly()
     {
-        $mockResponseCallback = function ($method, $url, $options) {
-            $this->assertEquals(APIWrapper::API_URL . '?gender=male&page=1&page_size=10&sort=popularity', $url);
+        $genderOption = 'male';
+        $pageOption = '13';
+        $pageSizeOption = '100';
+        $sortOption = 'popularity';
+        
+        $query = "?gender=${genderOption}&page=${pageOption}&page_size=${pageSizeOption}&sort=${sortOption}";
+        
+        $mockResponseCallback = function ($method, $url, $options) use ($query) {
+            $this->assertEquals(APIWrapper::API_URL . $query, $url);
 
             return new MockResponse('...');
         };
         
         $httpClientStub = new MockHttpClient(
             [
-                new MockResponse('...'),
+                $mockResponseCallback,
                 new MockResponse('...')
             ]
         );
@@ -69,10 +78,10 @@ class DumpCommandTest extends TestCase
             ->getMock();
         
         $getArgumentCallsMap = [
-            ['gender', 'male'],
-            ['page', '1'],
-            ['page-size', '10'],
-            ['sort', 'popularity'],
+            ['gender', $genderOption],
+            ['page', $pageOption],
+            ['page-size', $pageSizeOption],
+            ['sort', $sortOption],
         ];
         
         $consoleInputMock->expects($this->any())
