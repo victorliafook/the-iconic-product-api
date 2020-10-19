@@ -33,7 +33,7 @@ class DumpCommandTest extends TestCase
         
         $consoleOutputMock->expects($this->once())
             ->method('writeln')
-            ->with(json_encode(json_decode($videoAndOrderedDecoratedFixtureData)));      
+            ->with(json_encode(json_decode($videoAndOrderedDecoratedFixtureData)));
         
         $consoleInputMock = $this->createMock(ArgvInput::class);
         $command->execute($consoleInputMock, $consoleOutputMock);
@@ -41,7 +41,7 @@ class DumpCommandTest extends TestCase
     
     public function testCommandBuildsHttpQueryCorrectly()
     {
-        $mockResponseCallback = function($method, $url, $options) {
+        $mockResponseCallback = function ($method, $url, $options) {
             $this->assertEquals(APIWrapper::API_URL . '?gender=male&page=1&page_size=10&sort=popularity', $url);
 
             return new MockResponse('...');
@@ -80,5 +80,5 @@ class DumpCommandTest extends TestCase
             ->will($this->returnValueMap($getArgumentCallsMap));
 
         $command->execute($consoleInputMock, $consoleOutputMock);
-     }
+    }
 }

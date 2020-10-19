@@ -4,7 +4,7 @@ namespace TheIconicAPIDumper;
 
 class OrderByVideoCountDecorator implements APIResponseInterface
 {
-    function __construct($httpResponse)
+    public function __construct($httpResponse)
     {
         $this->response = $httpResponse;
     }
@@ -18,11 +18,13 @@ class OrderByVideoCountDecorator implements APIResponseInterface
     {
         $resultObject = json_decode($content);
         
-        if (empty($resultObject)) return $content;
+        if (empty($resultObject)) {
+            return $content;
+        }
         
         $productList = $resultObject->_embedded->product;
-        usort($productList, function($p1, $p2) {
-           return $p2->video_count - $p1->video_count;
+        usort($productList, function ($p1, $p2) {
+            return $p2->video_count - $p1->video_count;
         });
         
         $resultObject->_embedded->product = $productList;

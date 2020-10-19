@@ -40,7 +40,7 @@ class APIWrapperQueryBuilder
     public function build()
     {
         $paramsList = [];
-        foreach($this->queryParameters as $paramKey => $paramValue) {
+        foreach ($this->queryParameters as $paramKey => $paramValue) {
             $paramsList[] = "$paramKey=$paramValue";
         }
         

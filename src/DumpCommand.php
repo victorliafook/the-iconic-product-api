@@ -9,7 +9,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class DumpCommand extends Command
 {
-    function __construct(APIWrapper $api)
+    public function __construct(APIWrapper $api)
     {
         $this->wrapper = $api;
         parent::__construct();

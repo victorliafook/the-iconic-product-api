@@ -9,7 +9,7 @@ class APIWrapper
     const API_URL = 'https://eve.theiconic.com.au/catalog/products';
     private $query = '';
     
-    function __construct(HttpClientInterface $httpClient)
+    public function __construct(HttpClientInterface $httpClient)
     {
         $this->httpClient = $httpClient;
     }
@@ -30,8 +30,8 @@ class APIWrapper
         $requestURL = self::API_URL . '/' . $sku . '/videos';
         
         $content = $this->httpClient
-                        ->request('GET', $requestURL)
-                        ->getContent();
+            ->request('GET', $requestURL)
+            ->getContent();
 
         return json_decode($content)->_embedded->videos_url;
     }
