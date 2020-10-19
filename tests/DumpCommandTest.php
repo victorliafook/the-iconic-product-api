@@ -15,8 +15,13 @@ class DumpCommandTest extends TestCase
     public function testItDumpsJSONFromHTTPRequest()
     {
         $fixtureData = file_get_contents(self::JSON_FIXTURE);
+        $videoDetailsFixtureData = file_get_contents('tests/fixture/videoDetails.json');
+        $videoAndOrderedDecoratedFixtureData = file_get_contents('tests/fixture/videoAndOrderedDecoratedResult.json');
         $httpClientStub = new MockHttpClient(
-            [new MockResponse($fixtureData)]
+            [
+                new MockResponse($fixtureData),
+                new MockResponse($videoDetailsFixtureData)
+            ]
         );
              
         $APIWrapper = new APIWrapper($httpClientStub);
@@ -28,7 +33,7 @@ class DumpCommandTest extends TestCase
         
         $consoleOutputMock->expects($this->once())
             ->method('writeln')
-            ->with($fixtureData);      
+            ->with(json_encode(json_decode($videoAndOrderedDecoratedFixtureData)));      
         
         $consoleInputMock = $this->createMock(ArgvInput::class);
         $command->execute($consoleInputMock, $consoleOutputMock);
@@ -37,12 +42,17 @@ class DumpCommandTest extends TestCase
     public function testCommandBuildsHttpQueryCorrectly()
     {
         $mockResponseCallback = function($method, $url, $options) {
-            $this->assertEquals(APIWrapper::API_URL . '?gender=male&page=1&page_size=10', $url);
+            $this->assertEquals(APIWrapper::API_URL . '?gender=male&page=1&page_size=10&sort=popularity', $url);
 
             return new MockResponse('...');
         };
         
-        $httpClientStub = new MockHttpClient($mockResponseCallback);
+        $httpClientStub = new MockHttpClient(
+            [
+                new MockResponse('...'),
+                new MockResponse('...')
+            ]
+        );
              
         $APIWrapper = new APIWrapper($httpClientStub);
         $command = new DumpCommand($APIWrapper);

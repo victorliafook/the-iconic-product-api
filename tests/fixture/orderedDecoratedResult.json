@@ -16,6 +16,131 @@
    "_embedded":{
       "product":[
          {
+            "video_count":1,
+            "price":139,
+            "markdown_price":139,
+            "special_price":0,
+            "returnable":true,
+            "final_sale":false,
+            "stock_update":null,
+            "final_price":139,
+            "sku":"AE897AA79GWI",
+            "name":"Pleat Detail Linen Smock Dress",
+            "ribbon":null,
+            "messaging":{
+               "marketing":[
+                  
+               ],
+               "operational":[
+                  
+               ]
+            },
+            "color_name_brand":"Black",
+            "short_description":"Epitomising endless summer, Sydney label <b>AERE</b> offers more sustainable wardrobe staples in neutral hues and time-honoured fits. From women’s sun dresses and cropped blouses to button-ups and relaxed trousers for the boys, an AERE piece is an investment in the effortlessness of minimalist style.&nbsp;<br><br>Our model is wearing a size AU 8 dress. She is 177.8cm (5’10”) tall with a 76.2cm (30”) bust, a 61.0cm (24”) waist and 91.4cm (36”) hips.&nbsp;<br><br>- Length: 86cm (size AU 8)&nbsp;<br>- Relaxed smock fit&nbsp;<br>- Woven linen batiste with cotton poplin lining; non-stretch; opaque&nbsp;<br>- Black shade&nbsp;<br>- High ruffled neckline&nbsp;<br>- Long balloon sleeves with pin-tucked pleating and tie barrel cuffs&nbsp;<br>- Gathered waist&nbsp;<br>- Tiered pin-tuck pleating through skirt&nbsp;<br>- Keyhole button fastening to nape\n",
+            "shipment_type":"WH",
+            "color_name":"Black",
+            "color_hex":"#000000",
+            "cart_price_rules":null,
+            "attributes":null,
+            "simples":null,
+            "sustainability":{
+               "title":"This item is part of our Considered Edit",
+               "items":[
+                  "Made using linen"
+               ],
+               "groups":[
+                  {
+                     "name":"Sustainable Materials",
+                     "description":"Product made of materials with a lower environmental impact than conventional alternatives",
+                     "icon":"https://s3-ap-southeast-2.amazonaws.com/mediaonsite.theiconic.com.au/sustainability/Attributes-Icons-_Materials.png"
+                  }
+               ]
+            },
+            "link":"pleat-detail-linen-smock-dress-1004482.html",
+            "activated_at":"2020-02-05 17:01:04",
+            "return_policy_message":{
+               "message":"This product qualifies for 30 day free returns",
+               "bold_substring":"free returns"
+            },
+            "categories_translated":"Clothing|Dresses|Mini Dresses|Long Sleeve Dresses|Shift Dresses",
+            "category_path":null,
+            "category_ids":null,
+            "related_products":null,
+            "image_products":null,
+            "attribute_set_identifier":"AA",
+            "supplier":"BTC Fashion Pty ltd",
+            "wannaby_id":null,
+            "citrus_ad_id":null,
+            "associated_skus":"",
+            "size_guide_url":"https://www.theiconic.com.au/index/sizeguidemain?for=AA&brand=AERE&gender=female",
+            "related":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "variants":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "_embedded":{
+               "brand":{
+                  "id":4897,
+                  "name":"AERE",
+                  "url_key":"aere",
+                  "image_url":null,
+                  "banner_url":null,
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/brands/aere"
+                     }
+                  }
+               },
+               "gender":{
+                  "id":2,
+                  "name":"female",
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/genders/female"
+                     }
+                  }
+               },
+               "shops":[
+                  {
+                     "is_default":true,
+                     "name":"shop",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/shop"
+                        }
+                     }
+                  },
+                  {
+                     "is_default":false,
+                     "name":"iconicexclusives",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/iconicexclusives"
+                        }
+                     }
+                  }
+               ],
+               "images":[
+                  {
+                     "url":"http://static.theiconic.com.au/p/aere-3328-2844001-1.jpg",
+                     "thumbnail":"//static.theiconic.com.au/p/aere-3328-2844001-1.jpg"
+                  }
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"https://eve.theiconic.com.au/catalog/products/AE897AA79GWI"
+               }
+            }
+         },
+         {
             "video_count":0,
             "price":90,
             "markdown_price":90,
@@ -243,131 +368,6 @@
             "_links":{
                "self":{
                   "href":"https://eve.theiconic.com.au/catalog/products/AS119SF50KGJ"
-               }
-            }
-         },
-         {
-            "video_count":1,
-            "price":139,
-            "markdown_price":139,
-            "special_price":0,
-            "returnable":true,
-            "final_sale":false,
-            "stock_update":null,
-            "final_price":139,
-            "sku":"AE897AA79GWI",
-            "name":"Pleat Detail Linen Smock Dress",
-            "ribbon":null,
-            "messaging":{
-               "marketing":[
-                  
-               ],
-               "operational":[
-                  
-               ]
-            },
-            "color_name_brand":"Black",
-            "short_description":"Epitomising endless summer, Sydney label <b>AERE</b> offers more sustainable wardrobe staples in neutral hues and time-honoured fits. From women’s sun dresses and cropped blouses to button-ups and relaxed trousers for the boys, an AERE piece is an investment in the effortlessness of minimalist style.&nbsp;<br><br>Our model is wearing a size AU 8 dress. She is 177.8cm (5’10”) tall with a 76.2cm (30”) bust, a 61.0cm (24”) waist and 91.4cm (36”) hips.&nbsp;<br><br>- Length: 86cm (size AU 8)&nbsp;<br>- Relaxed smock fit&nbsp;<br>- Woven linen batiste with cotton poplin lining; non-stretch; opaque&nbsp;<br>- Black shade&nbsp;<br>- High ruffled neckline&nbsp;<br>- Long balloon sleeves with pin-tucked pleating and tie barrel cuffs&nbsp;<br>- Gathered waist&nbsp;<br>- Tiered pin-tuck pleating through skirt&nbsp;<br>- Keyhole button fastening to nape\n",
-            "shipment_type":"WH",
-            "color_name":"Black",
-            "color_hex":"#000000",
-            "cart_price_rules":null,
-            "attributes":null,
-            "simples":null,
-            "sustainability":{
-               "title":"This item is part of our Considered Edit",
-               "items":[
-                  "Made using linen"
-               ],
-               "groups":[
-                  {
-                     "name":"Sustainable Materials",
-                     "description":"Product made of materials with a lower environmental impact than conventional alternatives",
-                     "icon":"https://s3-ap-southeast-2.amazonaws.com/mediaonsite.theiconic.com.au/sustainability/Attributes-Icons-_Materials.png"
-                  }
-               ]
-            },
-            "link":"pleat-detail-linen-smock-dress-1004482.html",
-            "activated_at":"2020-02-05 17:01:04",
-            "return_policy_message":{
-               "message":"This product qualifies for 30 day free returns",
-               "bold_substring":"free returns"
-            },
-            "categories_translated":"Clothing|Dresses|Mini Dresses|Long Sleeve Dresses|Shift Dresses",
-            "category_path":null,
-            "category_ids":null,
-            "related_products":null,
-            "image_products":null,
-            "attribute_set_identifier":"AA",
-            "supplier":"BTC Fashion Pty ltd",
-            "wannaby_id":null,
-            "citrus_ad_id":null,
-            "associated_skus":"",
-            "size_guide_url":"https://www.theiconic.com.au/index/sizeguidemain?for=AA&brand=AERE&gender=female",
-            "related":{
-               "count":0,
-               "label":"Colour",
-               "visible":true,
-               "message":null
-            },
-            "variants":{
-               "count":0,
-               "label":"Colour",
-               "visible":true,
-               "message":null
-            },
-            "_embedded":{
-               "brand":{
-                  "id":4897,
-                  "name":"AERE",
-                  "url_key":"aere",
-                  "image_url":null,
-                  "banner_url":null,
-                  "_links":{
-                     "self":{
-                        "href":"https://eve.theiconic.com.au/catalog/brands/aere"
-                     }
-                  }
-               },
-               "gender":{
-                  "id":2,
-                  "name":"female",
-                  "_links":{
-                     "self":{
-                        "href":"https://eve.theiconic.com.au/catalog/genders/female"
-                     }
-                  }
-               },
-               "shops":[
-                  {
-                     "is_default":true,
-                     "name":"shop",
-                     "_links":{
-                        "self":{
-                           "href":"https://eve.theiconic.com.au/catalog/shops/shop"
-                        }
-                     }
-                  },
-                  {
-                     "is_default":false,
-                     "name":"iconicexclusives",
-                     "_links":{
-                        "self":{
-                           "href":"https://eve.theiconic.com.au/catalog/shops/iconicexclusives"
-                        }
-                     }
-                  }
-               ],
-               "images":[
-                  {
-                     "url":"http://static.theiconic.com.au/p/aere-3328-2844001-1.jpg",
-                     "thumbnail":"//static.theiconic.com.au/p/aere-3328-2844001-1.jpg"
-                  }
-               ]
-            },
-            "_links":{
-               "self":{
-                  "href":"https://eve.theiconic.com.au/catalog/products/AE897AA79GWI"
                }
             }
          }

@@ -363,7 +363,17 @@
                      "url":"http://static.theiconic.com.au/p/aere-3328-2844001-1.jpg",
                      "thumbnail":"//static.theiconic.com.au/p/aere-3328-2844001-1.jpg"
                   }
-               ]
+               ],
+               "videos": [
+                    {
+                        "url": "https://vod-progressive.akamaized.net/exp=1603069414~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2782%2F15%2F388910678%2F1642041598.mp4~hmac=46a184449001159cc62da394982e8ab8463a33ee0b5ddf072641c6fcb9b10bd0/vimeo-prod-skyfire-std-us/01/2782/15/388910678/1642041598.mp4",
+                        "_links": {
+                            "self": {
+                            "href": "https://eve.theiconic.com.au/catalog/products/AE897AA79GWI/videos"
+                            }
+                        }
+                    }
+                ]
             },
             "_links":{
                "self":{

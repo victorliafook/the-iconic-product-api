@@ -5,6 +5,8 @@ use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use TheIconicAPIDumper\APIWrapper;
 use TheIconicAPIDumper\APIWrapperQueryBuilder;
+use TheIconicAPIDumper\VideoPreviewDecorator;
+use TheIconicAPIDumper\OrderByVideoCountDecorator;
 
 class APIWrapperTest extends TestCase
 {
@@ -92,5 +94,53 @@ class APIWrapperTest extends TestCase
         $this->APIWrapper->setQuery($this->APIQueryBuilder);
         
         $this->assertEquals($targetURL, $this->APIWrapper->getRequestURL());
+    }
+    
+    public function testDecoratedResults()
+    {
+        $fixtureData = file_get_contents('tests/fixture/result.json');
+        $videoDetailsFixtureData = file_get_contents('tests/fixture/videoDetails.json');
+        $httpClientStub = new MockHttpClient(
+            [
+                new MockResponse($fixtureData),
+                new MockResponse($fixtureData),
+                new MockResponse($videoDetailsFixtureData),
+                new MockResponse($fixtureData)
+            ]
+        );
+             
+        $APIWrapper = new APIWrapper($httpClientStub);
+        $this->assertJsonStringEqualsJsonString($fixtureData, $APIWrapper->getProducts()->getContent());
+        
+        $decoratedfixtureData = file_get_contents('tests/fixture/videoDecoratedResult.json');
+        
+        $decoratedResponse = new VideoPreviewDecorator($APIWrapper->getProducts(), $APIWrapper);
+        $this->assertJsonStringEqualsJsonString($decoratedfixtureData, $decoratedResponse->getContent());
+        
+        $orderedDecoratedfixtureData = file_get_contents('tests/fixture/orderedDecoratedResult.json');
+        
+        $orderedDecoratedResponse = new OrderByVideoCountDecorator($APIWrapper->getProducts());
+        $this->assertJsonStringEqualsJsonString($orderedDecoratedfixtureData, $orderedDecoratedResponse->getContent());
+    }
+    
+    public function testMultipleDecorators()
+    {
+        $fixtureData = file_get_contents('tests/fixture/result.json');
+        $videoDetailsFixtureData = file_get_contents('tests/fixture/videoDetails.json');
+        $videoAndOrderedDecoratedFixtureData = file_get_contents('tests/fixture/videoAndOrderedDecoratedResult.json');
+        
+        $httpClientStub = new MockHttpClient(
+            [
+                new MockResponse($fixtureData),
+                new MockResponse($fixtureData),
+                new MockResponse($videoDetailsFixtureData)
+            ]
+        );
+             
+        $APIWrapper = new APIWrapper($httpClientStub);
+        $this->assertJsonStringEqualsJsonString($fixtureData, $APIWrapper->getProducts()->getContent());
+        
+        $decoratedResponse = new OrderByVideoCountDecorator(new VideoPreviewDecorator($APIWrapper->getProducts(), $APIWrapper));
+        $this->assertJsonStringEqualsJsonString($videoAndOrderedDecoratedFixtureData, $decoratedResponse->getContent());
     }
 }

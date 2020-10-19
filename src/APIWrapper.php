@@ -14,7 +14,7 @@ class APIWrapper
         $this->httpClient = $httpClient;
     }
     
-    public function get()
+    public function getProducts()
     {
         $requestURL = self::API_URL;
         if (!empty($this->query)) {
@@ -22,8 +22,18 @@ class APIWrapper
         }
         
         return $this->httpClient
-            ->request('GET', $requestURL)
-            ->getContent();
+            ->request('GET', $requestURL);
+    }
+    
+    public function getVideosArray($sku)
+    {
+        $requestURL = self::API_URL . '/' . $sku . '/videos';
+        
+        $content = $this->httpClient
+                        ->request('GET', $requestURL)
+                        ->getContent();
+
+        return json_decode($content)->_embedded->videos_url;
     }
     
     public function setQuery(APIWrapperQueryBuilder $queryBuilder)

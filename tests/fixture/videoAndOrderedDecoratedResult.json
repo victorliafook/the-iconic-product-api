@@ -1,0 +1,390 @@
+{
+   "_links":{
+      "self":{
+         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page=1&page_size=3"
+      },
+      "first":{
+         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page_size=3"
+      },
+      "last":{
+         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page=33333333&page_size=3"
+      },
+      "next":{
+         "href":"https://eve.theiconic.com.au/catalog/products?gender=female&page=2&page_size=3"
+      }
+   },
+   "_embedded":{
+      "product":[
+         {
+            "video_count":1,
+            "price":139,
+            "markdown_price":139,
+            "special_price":0,
+            "returnable":true,
+            "final_sale":false,
+            "stock_update":null,
+            "final_price":139,
+            "sku":"AE897AA79GWI",
+            "name":"Pleat Detail Linen Smock Dress",
+            "ribbon":null,
+            "messaging":{
+               "marketing":[
+                  
+               ],
+               "operational":[
+                  
+               ]
+            },
+            "color_name_brand":"Black",
+            "short_description":"Epitomising endless summer, Sydney label <b>AERE</b> offers more sustainable wardrobe staples in neutral hues and time-honoured fits. From women’s sun dresses and cropped blouses to button-ups and relaxed trousers for the boys, an AERE piece is an investment in the effortlessness of minimalist style.&nbsp;<br><br>Our model is wearing a size AU 8 dress. She is 177.8cm (5’10”) tall with a 76.2cm (30”) bust, a 61.0cm (24”) waist and 91.4cm (36”) hips.&nbsp;<br><br>- Length: 86cm (size AU 8)&nbsp;<br>- Relaxed smock fit&nbsp;<br>- Woven linen batiste with cotton poplin lining; non-stretch; opaque&nbsp;<br>- Black shade&nbsp;<br>- High ruffled neckline&nbsp;<br>- Long balloon sleeves with pin-tucked pleating and tie barrel cuffs&nbsp;<br>- Gathered waist&nbsp;<br>- Tiered pin-tuck pleating through skirt&nbsp;<br>- Keyhole button fastening to nape\n",
+            "shipment_type":"WH",
+            "color_name":"Black",
+            "color_hex":"#000000",
+            "cart_price_rules":null,
+            "attributes":null,
+            "simples":null,
+            "sustainability":{
+               "title":"This item is part of our Considered Edit",
+               "items":[
+                  "Made using linen"
+               ],
+               "groups":[
+                  {
+                     "name":"Sustainable Materials",
+                     "description":"Product made of materials with a lower environmental impact than conventional alternatives",
+                     "icon":"https://s3-ap-southeast-2.amazonaws.com/mediaonsite.theiconic.com.au/sustainability/Attributes-Icons-_Materials.png"
+                  }
+               ]
+            },
+            "link":"pleat-detail-linen-smock-dress-1004482.html",
+            "activated_at":"2020-02-05 17:01:04",
+            "return_policy_message":{
+               "message":"This product qualifies for 30 day free returns",
+               "bold_substring":"free returns"
+            },
+            "categories_translated":"Clothing|Dresses|Mini Dresses|Long Sleeve Dresses|Shift Dresses",
+            "category_path":null,
+            "category_ids":null,
+            "related_products":null,
+            "image_products":null,
+            "attribute_set_identifier":"AA",
+            "supplier":"BTC Fashion Pty ltd",
+            "wannaby_id":null,
+            "citrus_ad_id":null,
+            "associated_skus":"",
+            "size_guide_url":"https://www.theiconic.com.au/index/sizeguidemain?for=AA&brand=AERE&gender=female",
+            "related":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "variants":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "_embedded":{
+               "brand":{
+                  "id":4897,
+                  "name":"AERE",
+                  "url_key":"aere",
+                  "image_url":null,
+                  "banner_url":null,
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/brands/aere"
+                     }
+                  }
+               },
+               "gender":{
+                  "id":2,
+                  "name":"female",
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/genders/female"
+                     }
+                  }
+               },
+               "shops":[
+                  {
+                     "is_default":true,
+                     "name":"shop",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/shop"
+                        }
+                     }
+                  },
+                  {
+                     "is_default":false,
+                     "name":"iconicexclusives",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/iconicexclusives"
+                        }
+                     }
+                  }
+               ],
+               "images":[
+                  {
+                     "url":"http://static.theiconic.com.au/p/aere-3328-2844001-1.jpg",
+                     "thumbnail":"//static.theiconic.com.au/p/aere-3328-2844001-1.jpg"
+                  }
+               ],
+               "videos": [
+                    {
+                        "url": "https://vod-progressive.akamaized.net/exp=1603069414~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2782%2F15%2F388910678%2F1642041598.mp4~hmac=46a184449001159cc62da394982e8ab8463a33ee0b5ddf072641c6fcb9b10bd0/vimeo-prod-skyfire-std-us/01/2782/15/388910678/1642041598.mp4",
+                        "_links": {
+                            "self": {
+                            "href": "https://eve.theiconic.com.au/catalog/products/AE897AA79GWI/videos"
+                            }
+                        }
+                    }
+                ]
+            },
+            "_links":{
+               "self":{
+                  "href":"https://eve.theiconic.com.au/catalog/products/AE897AA79GWI"
+               }
+            }
+         },
+         {
+            "video_count":0,
+            "price":90,
+            "markdown_price":90,
+            "special_price":0,
+            "returnable":true,
+            "final_sale":false,
+            "stock_update":null,
+            "final_price":90,
+            "sku":"AS787AA90ABH",
+            "name":"Logo Fleece Sweater",
+            "ribbon":"new",
+            "messaging":{
+               "marketing":[
+                  {
+                     "type":"new",
+                     "short":"New",
+                     "medium":"New arrival",
+                     "long":"New arrival",
+                     "color":"#42ABC8",
+                     "url":null
+                  }
+               ],
+               "operational":[
+                  
+               ]
+            },
+            "color_name_brand":"Coral",
+            "short_description":"<b>Assembly Label</b> designs and delivers simplified, well-made apparel and accessories for an audience who craves a relaxed coastal lifestyle. From perennial jersey basics to easy linen separates, shirting and leather goods, <b>Assembly Label</b>’s curated range has styles that will quickly become the cornerstone of any wardrobe.<br><br>Length: 60cm (size AU 8). Our model is 176.5cm (5’9.5”) tall with a 81.3cm (32”) bust, a 62.2cm (24.5”) waist and 91.4cm (36”) hips<br><br>\n- Soft mid-weight cotton; natural stretch; fleece-backing; opaque<br>\n- Long sleeves; ribbed cuffs<br>\n- Branding printed to chest in optic white <br><br>PLEASE NOTE: Due to the garment-dyeing process of this piece, we strongly advise against using stain removers or harsh detergents, which may affect the colour.\n",
+            "shipment_type":"WH",
+            "color_name":"Coral",
+            "color_hex":"#ffe5e5",
+            "cart_price_rules":null,
+            "attributes":null,
+            "simples":null,
+            "sustainability":null,
+            "link":"logo-fleece-sweater-1152483.html",
+            "activated_at":"2020-10-19 07:20:35",
+            "return_policy_message":{
+               "message":"This product qualifies for 30 day free returns",
+               "bold_substring":"free returns"
+            },
+            "categories_translated":"Clothing|Sweats and Hoodies|Sweats",
+            "category_path":null,
+            "category_ids":null,
+            "related_products":null,
+            "image_products":null,
+            "attribute_set_identifier":"AA",
+            "supplier":"Modern Standard",
+            "wannaby_id":null,
+            "citrus_ad_id":null,
+            "associated_skus":"",
+            "size_guide_url":"https://www.theiconic.com.au/index/sizeguidemain?for=AA&brand=Assembly+Label&gender=female",
+            "related":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "variants":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "_embedded":{
+               "brand":{
+                  "id":787,
+                  "name":"Assembly Label",
+                  "url_key":"assembly",
+                  "image_url":"http://static.theiconic.com.au/b/assembly.jpg",
+                  "banner_url":null,
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/brands/assembly"
+                     }
+                  }
+               },
+               "gender":{
+                  "id":2,
+                  "name":"female",
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/genders/female"
+                     }
+                  }
+               },
+               "shops":[
+                  {
+                     "is_default":true,
+                     "name":"shop",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/shop"
+                        }
+                     }
+                  }
+               ],
+               "images":[
+                  {
+                     "url":"http://static.theiconic.com.au/p/assembly-0217-3842511-1.jpg",
+                     "thumbnail":"//static.theiconic.com.au/p/assembly-0217-3842511-1.jpg"
+                  }
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"https://eve.theiconic.com.au/catalog/products/AS787AA90ABH"
+               }
+            }
+         },
+         {
+            "video_count":0,
+            "price":130,
+            "markdown_price":130,
+            "special_price":0,
+            "returnable":true,
+            "final_sale":false,
+            "stock_update":null,
+            "final_price":130,
+            "sku":"AS119SF50KGJ",
+            "name":"GEL-Excite 7 Twist - Women's",
+            "ribbon":"new",
+            "messaging":{
+               "marketing":[
+                  {
+                     "type":"new",
+                     "short":"New",
+                     "medium":"New arrival",
+                     "long":"New arrival",
+                     "color":"#42ABC8",
+                     "url":null
+                  }
+               ],
+               "operational":[
+                  
+               ]
+            },
+            "color_name_brand":"White & White",
+            "short_description":"<b>PLEASE NOTE - THE ICONIC IS UNABLE TO SHIP THIS PRODUCT TO NEW ZEALAND\n<br></b><br>\n<b>ASICS</b> strive to build their brand through technical quality and pushing the limits. With a seamless blend of form and function, <b>ASICS</b> aims to help professional and recreational athletes reach their peak performance, and enjoy the process.\n<br><br>\n- Engineered mesh upper with faux leather overlays<br>\n- Internal heel counter<br>\n- Amplifoam midsole<br>\n- Sponge rubber outsole<br>",
+            "shipment_type":"WH",
+            "color_name":"White & White",
+            "color_hex":"#faf5ed",
+            "cart_price_rules":null,
+            "attributes":null,
+            "simples":null,
+            "sustainability":null,
+            "link":"gel-excite-7-twist-women-s-1107422.html",
+            "activated_at":"2020-10-19 10:19:33",
+            "return_policy_message":{
+               "message":"This product qualifies for 30 day free returns",
+               "bold_substring":"free returns"
+            },
+            "categories_translated":"Shoes|Running|Performance Shoes",
+            "category_path":null,
+            "category_ids":null,
+            "related_products":null,
+            "image_products":null,
+            "attribute_set_identifier":"SF",
+            "supplier":"Asics Oceania Pty Ltd",
+            "wannaby_id":null,
+            "citrus_ad_id":null,
+            "associated_skus":"",
+            "size_guide_url":"https://www.theiconic.com.au/index/sizeguidemain?for=SF&brand=ASICS&gender=female",
+            "related":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "variants":{
+               "count":0,
+               "label":"Colour",
+               "visible":true,
+               "message":null
+            },
+            "_embedded":{
+               "brand":{
+                  "id":2119,
+                  "name":"ASICS",
+                  "url_key":"asics",
+                  "image_url":null,
+                  "banner_url":null,
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/brands/asics"
+                     }
+                  }
+               },
+               "gender":{
+                  "id":2,
+                  "name":"female",
+                  "_links":{
+                     "self":{
+                        "href":"https://eve.theiconic.com.au/catalog/genders/female"
+                     }
+                  }
+               },
+               "shops":[
+                  {
+                     "is_default":false,
+                     "name":"sports",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/sports"
+                        }
+                     }
+                  },
+                  {
+                     "is_default":true,
+                     "name":"shop",
+                     "_links":{
+                        "self":{
+                           "href":"https://eve.theiconic.com.au/catalog/shops/shop"
+                        }
+                     }
+                  }
+               ],
+               "images":[
+                  {
+                     "url":"http://static.theiconic.com.au/p/asics-9194-2247011-1.jpg",
+                     "thumbnail":"//static.theiconic.com.au/p/asics-9194-2247011-1.jpg"
+                  }
+               ]
+            },
+            "_links":{
+               "self":{
+                  "href":"https://eve.theiconic.com.au/catalog/products/AS119SF50KGJ"
+               }
+            }
+         }
+      ]
+   },
+   "page_count":21398,
+   "page_size":3,
+   "total_items":64193,
+   "page":1
+}
