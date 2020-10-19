@@ -6,6 +6,8 @@ use TheIconicAPIDumper\APIResponseInterface;
 
 class OrderByVideoCountDecorator implements APIResponseInterface
 {
+    private $response;
+    
     public function __construct($httpResponse)
     {
         $this->response = $httpResponse;

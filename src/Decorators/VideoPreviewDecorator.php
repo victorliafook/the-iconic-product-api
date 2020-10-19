@@ -6,6 +6,9 @@ use TheIconicAPIDumper\APIResponseInterface;
 
 class VideoPreviewDecorator implements APIResponseInterface
 {
+    private $response;
+    private $APIWrapper;
+    
     public function __construct($httpResponse, $APIWrapper)
     {
         $this->response = $httpResponse;
