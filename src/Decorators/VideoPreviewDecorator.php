@@ -1,6 +1,8 @@
 <?php
 
-namespace TheIconicAPIDumper;
+namespace TheIconicAPIDumper\Decorators;
+
+use TheIconicAPIDumper\APIResponseInterface;
 
 class VideoPreviewDecorator implements APIResponseInterface
 {

@@ -5,8 +5,8 @@ use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
 use TheIconicAPIDumper\APIWrapper;
 use TheIconicAPIDumper\APIWrapperQueryBuilder;
-use TheIconicAPIDumper\VideoPreviewDecorator;
-use TheIconicAPIDumper\OrderByVideoCountDecorator;
+use TheIconicAPIDumper\Decorators\OrderByVideoCountDecorator;
+use TheIconicAPIDumper\Decorators\VideoPreviewDecorator;
 
 class APIWrapperTest extends TestCase
 {
