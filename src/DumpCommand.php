@@ -52,16 +52,11 @@ class DumpCommand extends Command
         }
 
         $this->wrapper->setQuery($APIWrapperBuilder);
-        $APIResponse = $this->wrapper->getProducts();
+        $productsResultSet = $this->wrapper->getProducts();
         
-        $decoratedResponse = new OrderByVideoCountDecorator(new VideoPreviewDecorator($APIResponse, $this->wrapper));
+        $decoratedResponse = new OrderByVideoCountDecorator(new VideoPreviewDecorator($productsResultSet, $this->wrapper));
         
-        $output->writeln($this->getResponseContent($decoratedResponse));
+        $output->writeln($decoratedResponse->getContent());
         return Command::SUCCESS;
-    }
-    
-    private function getResponseContent(APIResponseInterface $response)
-    {
-        return $response->getContent();
     }
 }

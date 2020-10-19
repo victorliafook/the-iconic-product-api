@@ -21,8 +21,8 @@ class APIWrapper
             $requestURL .= $this->query;
         }
         
-        return $this->httpClient
-            ->request('GET', $requestURL);
+        return new APIResultObject($this->httpClient
+            ->request('GET', $requestURL));
     }
     
     public function getVideosArray($sku)
