@@ -6,26 +6,32 @@ use TheIconicAPIDumper\APIResponseInterface;
 
 class VideoPreviewDecorator implements APIResponseInterface
 {
-    public function __construct($httpResponse, $APIWrapper)
+    private $resultObject;
+    private $APIWrapper;
+    
+    public function __construct($resultObject, $APIWrapper)
     {
-        $this->response = $httpResponse;
+        $this->resultObject = $resultObject;
         $this->APIWrapper = $APIWrapper;
+    }
+    
+    public function getResultObject()
+    {
+        return $this->addVideoPreviewData($this->resultObject->getResultObject());
     }
     
     public function getContent()
     {
-        return $this->addVideoPreviewData($this->response->getContent());
+        return json_encode($this->getResultObject());
     }
     
     private function addVideoPreviewData($content)
     {
-        $resultObject = json_decode($content);
-        
-        if (empty($resultObject)) {
+        if (empty($content)) {
             return $content;
         }
         
-        $productList = $resultObject->_embedded->product;
+        $productList = $content->_embedded->product;
         foreach ($productList as $product) {
             if ($product->video_count > 0) {
                 $videos = $this->APIWrapper->getVideosArray($product->sku);
@@ -33,6 +39,6 @@ class VideoPreviewDecorator implements APIResponseInterface
             }
         }
         
-        return json_encode($resultObject);
+        return $content;
     }
 }

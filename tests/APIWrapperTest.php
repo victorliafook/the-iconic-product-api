@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpClient\MockHttpClient;
 use Symfony\Component\HttpClient\Response\MockResponse;
+use TheIconicAPIDumper\APIResultObject;
 use TheIconicAPIDumper\APIWrapper;
 use TheIconicAPIDumper\APIWrapperQueryBuilder;
 use TheIconicAPIDumper\Decorators\OrderByVideoCountDecorator;
@@ -120,12 +121,14 @@ class APIWrapperTest extends TestCase
         
         $decoratedfixtureData = file_get_contents(self::VIDEO_DECORATED_JSON_RESULT_FIXTURE);
         
-        $decoratedResponse = new VideoPreviewDecorator($APIWrapper->getProducts(), $APIWrapper);
+        $productsResultSet = new APIResultObject($APIWrapper->getProducts());
+        $decoratedResponse = new VideoPreviewDecorator($productsResultSet, $APIWrapper);
         $this->assertJsonStringEqualsJsonString($decoratedfixtureData, $decoratedResponse->getContent());
         
         $orderedDecoratedfixtureData = file_get_contents(self::VIDEO_ORDERED_JSON_RESULT_FIXTURE);
         
-        $orderedDecoratedResponse = new OrderByVideoCountDecorator($APIWrapper->getProducts());
+        $productsResultSet = $APIWrapper->getProducts();
+        $orderedDecoratedResponse = new OrderByVideoCountDecorator($productsResultSet);
         $this->assertJsonStringEqualsJsonString($orderedDecoratedfixtureData, $orderedDecoratedResponse->getContent());
     }
     
@@ -146,7 +149,8 @@ class APIWrapperTest extends TestCase
         $APIWrapper = new APIWrapper($httpClientStub);
         $this->assertJsonStringEqualsJsonString($fixtureData, $APIWrapper->getProducts()->getContent());
         
-        $decoratedResponse = new OrderByVideoCountDecorator(new VideoPreviewDecorator($APIWrapper->getProducts(), $APIWrapper));
+        $productsResultSet = $APIWrapper->getProducts();
+        $decoratedResponse = new OrderByVideoCountDecorator(new VideoPreviewDecorator($productsResultSet, $APIWrapper));
         $this->assertJsonStringEqualsJsonString($videoAndOrderedDecoratedFixtureData, $decoratedResponse->getContent());
     }
 }
